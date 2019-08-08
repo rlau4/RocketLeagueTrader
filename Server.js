@@ -19,11 +19,16 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/RocketLeagueDB", { useNewUrlParser: true });
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/RocketLeagueTrade";
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+
 
 // Routes
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 // Start the server
 app.listen(PORT, function() {
-  console.log("App running on port " + PORT + "!");
+  console.log("App running on port " + PORT);
 });
