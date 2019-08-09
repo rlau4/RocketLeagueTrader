@@ -19,7 +19,7 @@ $(document).on("click", "#tradeSubmit", function(){
     var thisId = $(this).attr("data-id");
     $.ajax({
         method: "POST",
-        url: "/articles/" + thisId,
+        url: "/trades/" + thisId,
         data:{
             haveItem: $("haveItem").val(),
             haveCertification: $("haveCertification").val(),
