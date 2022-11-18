@@ -9,7 +9,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-facebook-login": "^4.1.1",
-    "react-scripts": "3.0.1",
+    "react-scripts": "5.0.1",
     "node": "^10.15.1",
     "morgan": "^1.9.1"
   },
